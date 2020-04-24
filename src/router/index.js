@@ -1,8 +1,10 @@
 import Vue from "vue";
 import Router from "vue-router";
 
-const Home = () => import(/* webpackChunkName: "index" */ '@/views/Home.vue')
-const About = () => import(/* webpackChunkName: "About" */ '@/views/About.vue')
+const VUE = () => import(/* webpackChunkName: "vue" */ '@/views/vue.vue')
+const Vuex = () => import(/* webpackChunkName: "vuex" */ '@/views/vuex.vue')
+const vueCli3 = () => import(/* webpackChunkName: "vueCli3" */ '@/views/vueCli3.vue')
+const vueSSR = () => import(/* webpackChunkName: "vueSSR" */ '@/views/vueSSR.vue')
 
 Vue.use(Router)
 
@@ -12,16 +14,27 @@ export function createRouter() {
     routes: [
       {
         path: "/",
-        name: "home",
-        component: Home
+        redirect: "vue"
       },
       {
-        path: "/about",
-        name: "about",
-        // route level code-splitting
-        // this generates a separate chunk (about.[hash].js) for this route
-        // which is lazy-loaded when the route is visited.
-        component: About
+        path: "/vue",
+        name: "vue",
+        component: VUE
+      },
+      {
+        path: "/vuex",
+        name: "vuex",
+        component: Vuex
+      },
+      {
+        path: "/vueCli3",
+        name: "vueCli3",
+        component: vueCli3
+      },
+      {
+        path: "/vueSSR",
+        name: "vueSSR",
+        component: vueSSR
       }
     ]
   });
