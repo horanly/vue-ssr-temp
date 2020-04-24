@@ -1,18 +1,18 @@
 import Vue from "vue";
 import App from "./App.vue";
 import { createRouter } from "./router";
-// import { createStore } from "./store";
+import { createStore } from "./store";
 
 Vue.config.productionTip = false;
 
 export function createApp() {
   // 创建 router 实例
   const router = createRouter();
-  // const store = createStore();
+  const store = createStore();
 
   const app = new Vue({
     router,
-    // store,
+    store,
     render: h => h(App)
   });
   return { app, router };
