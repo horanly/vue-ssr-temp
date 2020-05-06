@@ -1,89 +1,182 @@
 {
   "publicPath": "/",
   "all": [
-    "css/main.d481e703.css",
+    "css/main.8f42bb11.css",
     "favicon.ico",
+    "img/lifecycle.b3251a15.png",
+    "img/vuex.288a0dc9.png",
     "index.html",
     "js/chunk-vendors.6c03dd59.js",
     "js/chunk-vendors.6c03dd59.js.map",
-    "js/main.36a53b02.js",
-    "js/main.36a53b02.js.map",
-    "js/vue.e7292854.js",
-    "js/vue.e7292854.js.map",
-    "js/vueCli3.308f2ae0.js",
-    "js/vueCli3.308f2ae0.js.map",
-    "js/vueSSR.031843ff.js",
-    "js/vueSSR.031843ff.js.map",
-    "js/vuex.dbc05d11.js",
-    "js/vuex.dbc05d11.js.map"
+    "js/main.aadc692b.js",
+    "js/main.aadc692b.js.map"
   ],
   "initial": [
     "js/chunk-vendors.6c03dd59.js",
-    "css/main.d481e703.css",
-    "js/main.36a53b02.js"
+    "css/main.8f42bb11.css",
+    "js/main.aadc692b.js"
   ],
-  "async": [
-    "js/vue.e7292854.js",
-    "js/vueCli3.308f2ae0.js",
-    "js/vueSSR.031843ff.js",
-    "js/vuex.dbc05d11.js"
-  ],
+  "async": [],
   "modules": {
     "3725902c": [
       0,
-      5,
+      7,
       -1,
-      6
+      8,
+      2,
+      3
     ],
-    "27ac577d": [
-      11,
-      12
+    "152f7326": [
+      0,
+      7,
+      -1,
+      8,
+      2,
+      3
+    ],
+    "77e5d726": [
+      0,
+      7,
+      -1,
+      8,
+      2,
+      3
+    ],
+    "742040b2": [
+      0,
+      7,
+      -1,
+      8,
+      2,
+      3
+    ],
+    "697ea8ab": [
+      0,
+      7,
+      -1,
+      8,
+      2,
+      3
+    ],
+    "54480fe7": [
+      0,
+      7,
+      -1,
+      8,
+      2,
+      3
     ],
     "4573404c": [
-      3,
-      4
+      5,
+      6
     ],
     "48ad575e": [
-      3,
-      4
+      5,
+      6
     ],
     "34fe3af0": [
-      3,
-      4
+      5,
+      6
     ],
-    "d0c478f6": [
+    "492b532c": [
+      0,
       7,
-      8
+      -1,
+      8,
+      2,
+      3
+    ],
+    "4b5b2629": [
+      0,
+      7,
+      -1,
+      8,
+      2,
+      3
     ],
     "1fc2c82e": [
       0,
-      5,
+      7,
       -1,
-      6
+      8,
+      2,
+      3
+    ],
+    "cbada22e": [
+      0,
+      7,
+      -1,
+      8,
+      2,
+      3
+    ],
+    "ccf80afa": [
+      0,
+      7,
+      -1,
+      8,
+      2,
+      3
+    ],
+    "522e463c": [
+      0,
+      7,
+      -1,
+      8,
+      2,
+      3
     ],
     "5df604f4": [
-      3,
-      4
+      5,
+      6
+    ],
+    "5ba66e24": [
+      0,
+      7,
+      -1,
+      8,
+      2,
+      3
     ],
     "7e1e7bf9": [
       0,
-      5,
+      7,
       -1,
-      6
+      8,
+      2,
+      3
+    ],
+    "b50eba88": [
+      0,
+      7,
+      -1,
+      8,
+      2,
+      3
     ],
     "cadb7c98": [
       0,
-      5,
+      7,
       -1,
-      6
+      8,
+      2,
+      3
     ],
-    "bca66a90": [
-      9,
-      10
+    "020d5116": [
+      0,
+      7,
+      -1,
+      8,
+      2,
+      3
     ],
-    "600cc3c3": [
-      13,
-      14
+    "2711f09e": [
+      0,
+      7,
+      -1,
+      8,
+      2,
+      3
     ]
   }
 }

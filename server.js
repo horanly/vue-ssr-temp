@@ -29,15 +29,30 @@ function renderToString(context) {
 }
 // 第 3 步：添加一个中间件来处理所有请求
 app.use(async (ctx, next) => {
+  // const url = ctx.path
+  // if (/\w+.[js|css|jpg|jpeg|png|gif|map]/.test(url)) {
+  //   console.log(`proxy ${url}`)
+  //   return await send(ctx, url, { root: path.resolve(__dirname, './dist') })
+  // }
+  // const context = {
+  //   title: "ssr test",
+  //   url: ctx.url
+  // };
+
   const url = ctx.path
-  if (/\w+.[js|css|jpg|jpeg|png|gif|map]/.test(url)) {
+  console.log(url)
+  if (url.includes('.')) {
     console.log(`proxy ${url}`)
-    return await send(ctx, url, { root: path.resolve(__dirname, '../dist') })
+    return await send(ctx, url, {root: path.resolve(__dirname,'./dist')})
   }
+
+  ctx.res.setHeader("Content-Type", "text/html");
   const context = {
     title: "ssr test",
     url: ctx.url
   };
+
+
   // 将 context 数据渲染为 HTML
   const html = await renderToString(context);
   ctx.body = html;

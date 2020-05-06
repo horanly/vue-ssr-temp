@@ -1,2 +1,0 @@
-(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["vueCli3"],{c86b:function(e,t,n){"use strict";n.r(t);var l=function(){var e=this,t=e.$createElement;e._self._c;return e._m(0)},u=[function(){var e=this,t=e.$createElement,n=e._self._c||t;return n("div",{staticClass:"about"},[n("h1",[e._v("vueCli3")])])}],c=n("2877"),s={},a=Object(c["a"])(s,l,u,!1,null,null,null);t["default"]=a.exports}}]);
-//# sourceMappingURL=vueCli3.308f2ae0.js.map

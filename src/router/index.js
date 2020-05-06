@@ -1,10 +1,16 @@
 import Vue from "vue";
 import Router from "vue-router";
 
-const VUE = () => import(/* webpackChunkName: "vue" */ '@/views/vue.vue')
-const Vuex = () => import(/* webpackChunkName: "vuex" */ '@/views/vuex.vue')
-const vueCli3 = () => import(/* webpackChunkName: "vueCli3" */ '@/views/vueCli3.vue')
-const vueSSR = () => import(/* webpackChunkName: "vueSSR" */ '@/views/vueSSR.vue')
+// const VuePage = () => import(/* webpackChunkName: "vue" */ '@/views/vue.vue')
+// const Vuex = () => import(/* webpackChunkName: "vuex" */ '@/views/vuex.vue')
+// const VueCli3 = () => import(/* webpackChunkName: "vueCli3" */ '@/views/vueCli3.vue')
+// const VueSSR = () => import(/* webpackChunkName: "vueSSR" */ '@/views/vueSSR.vue')
+
+import VuePage from '@/views/vue.vue'
+import Vuex from '@/views/vuex.vue'
+import VueCli3 from '@/views/vueCli3.vue'
+import VueSSR from '@/views/vueSSR.vue'
+
 
 Vue.use(Router)
 
@@ -14,12 +20,12 @@ export function createRouter() {
     routes: [
       {
         path: "/",
-        redirect: "vue"
+        redirect: "/vue"
       },
       {
         path: "/vue",
         name: "vue",
-        component: VUE
+        component: VuePage
       },
       {
         path: "/vuex",
@@ -29,12 +35,12 @@ export function createRouter() {
       {
         path: "/vueCli3",
         name: "vueCli3",
-        component: vueCli3
+        component: VueCli3
       },
       {
         path: "/vueSSR",
         name: "vueSSR",
-        component: vueSSR
+        component: VueSSR
       }
     ]
   });
