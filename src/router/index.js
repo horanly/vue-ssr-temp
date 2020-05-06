@@ -10,6 +10,7 @@ import VuePage from '@/views/vue.vue'
 import Vuex from '@/views/vuex.vue'
 import VueCli3 from '@/views/vueCli3.vue'
 import VueSSR from '@/views/vueSSR.vue'
+import Axios from '@/views/axios.vue'
 
 
 Vue.use(Router)
@@ -41,6 +42,11 @@ export function createRouter() {
         path: "/vueSSR",
         name: "vueSSR",
         component: VueSSR
+      },
+      {
+        path: "/axios",
+        name: "axios",
+        component: Axios
       }
     ]
   });
