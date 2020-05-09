@@ -1,25 +1,25 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link v-for="item  in $router.options.routes" :key="item.path" :to="item.path">
-        {{item.name}}
-      </router-link>
+    <header-page></header-page>
+    <div class="main-section">
+      <keep-alive>
+        <router-view />
+      </keep-alive>
     </div>
-    <router-view />
   </div>
 </template>
 <script>
+import headerPage from '@/components/header.vue'
 export default {
   created() {
     // console.log( this.$router.options.routes )
-  }
+  },
+  components: {
+      headerPage
+  },
 };
 </script>
 <style lang="scss">
-*{
-  margin: 0;
-  padding: 0;
-}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -27,21 +27,9 @@ export default {
   text-align: center;
   color: #2c3e50;
 }
-
-#nav {
-  padding: 10px;
-  line-height: 2;
-  background-color: rgb(84, 92, 100);
-  margin-bottom: 10px;
-  a {
-    font-weight: bold;
-    color: #fff;
-    font-size: 18px;
-    padding: 0 20px;
-    text-decoration: none;
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+.main-section{
+  margin: auto;
+  margin-top: 40px;
+  width: 1200px;
 }
 </style>

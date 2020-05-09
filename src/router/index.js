@@ -1,17 +1,16 @@
 import Vue from "vue";
 import Router from "vue-router";
 
-// const VuePage = () => import(/* webpackChunkName: "vue" */ '@/views/vue.vue')
-// const Vuex = () => import(/* webpackChunkName: "vuex" */ '@/views/vuex.vue')
-// const VueCli3 = () => import(/* webpackChunkName: "vueCli3" */ '@/views/vueCli3.vue')
-// const VueSSR = () => import(/* webpackChunkName: "vueSSR" */ '@/views/vueSSR.vue')
 
-import VuePage from '@/views/vue.vue'
-import Vuex from '@/views/vuex.vue'
-import VueCli3 from '@/views/vueCli3.vue'
-import VueSSR from '@/views/vueSSR.vue'
-import Axios from '@/views/axios.vue'
+// import VuePage from '@/views/vue.vue'
+// import Vuex from '@/views/vuex.vue'
+// import VueCli3 from '@/views/vueCli3.vue'
+// import VueSSR from '@/views/vueSSR.vue'
+// import Axios from '@/views/axios.vue'
 
+import homePage from '@/views/cnode/index.vue'
+import Topic from '@/views/cnode/topic.vue'
+import User from '@/views/cnode/user.vue'
 
 Vue.use(Router)
 
@@ -21,33 +20,59 @@ export function createRouter() {
     routes: [
       {
         path: "/",
-        redirect: "/vue"
+        name: "home",
+        component: homePage
       },
       {
-        path: "/vue",
-        name: "vue",
-        component: VuePage
+        path: '/topic/:id',
+        name: 'topic',
+        component: Topic
       },
       {
-        path: "/vuex",
-        name: "vuex",
-        component: Vuex
+        path: '/user/:id',
+        name: 'user',
+        component: User
       },
       {
-        path: "/vueCli3",
-        name: "vueCli3",
-        component: VueCli3
+        path: '/topic',
+        redirect: '/'
       },
       {
-        path: "/vueSSR",
-        name: "vueSSR",
-        component: VueSSR
-      },
-      {
-        path: "/axios",
-        name: "axios",
-        component: Axios
+        path: '/user',
+        redirect: '/'
       }
+
+
+
+      // {
+      //   path: "/",
+      //   redirect: "/vue"
+      // },
+      // {
+      //   path: "/vue",
+      //   name: "vue",
+      //   component: VuePage
+      // },
+      // {
+      //   path: "/vuex",
+      //   name: "vuex",
+      //   component: Vuex
+      // },
+      // {
+      //   path: "/vueCli3",
+      //   name: "vueCli3",
+      //   component: VueCli3
+      // },
+      // {
+      //   path: "/vueSSR",
+      //   name: "vueSSR",
+      //   component: VueSSR
+      // },
+      // {
+      //   path: "/axios",
+      //   name: "axios",
+      //   component: Axios
+      // }
     ]
   });
 }

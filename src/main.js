@@ -1,8 +1,24 @@
 import Vue from "vue";
 import App from "./App.vue";
+
 import { createRouter } from "./router";
 import { createStore } from "./store";
 
+import './assets/css/main.scss'
+
+import ViewUI from 'view-design'
+import 'view-design/dist/styles/iview.css';
+import moment from 'moment'
+import tab from '@/utils/tab'
+
+// 设置使用中文
+moment.locale('zh-cn')
+
+Vue.config.productionTip = false
+Vue.prototype.$moment = moment
+Vue.prototype.$tab = tab
+
+Vue.use(ViewUI);
 Vue.config.productionTip = false;
 
 export function createApp() {

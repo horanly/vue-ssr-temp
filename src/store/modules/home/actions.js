@@ -1,11 +1,19 @@
-import { getList } from '@/api/home/index.js'
+import { getTopics } from '@/api/home/index.js'
 
 const actions = {
-  getListAjax: (ctx, item) => {
-    getList(item).then(data => {
-      console.log(ctx, 'actions');
+  getListAjax: (ctx, data) => {
+    getTopics(data).then(res => {
+      ctx.commit('changeList', res.data)
+      let obj = {}
+      data.limit = data.limit + 10
+      obj[data.tab] = {
+        limit: data.limit,
+        data: res.data
+      }
+      console.log(obj, 'changeStoreList');
       
-      ctx.commit('changeList', data.varList)
+      ctx.commit('changeStoreList', obj)
+
     }).catch(error => {
       console.log(error)
     })
