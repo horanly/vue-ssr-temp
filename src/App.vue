@@ -2,34 +2,33 @@
   <div id="app">
     <header-page></header-page>
     <div class="main-section">
-      <keep-alive>
-        <router-view />
-      </keep-alive>
+      <router-view />
     </div>
   </div>
 </template>
 <script>
-import headerPage from '@/components/header.vue'
+import headerPage from "@/components/header.vue";
 export default {
   created() {
     // console.log( this.$router.options.routes )
   },
   components: {
-      headerPage
+    headerPage,
   },
 };
 </script>
 <style lang="scss">
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-.main-section{
-  margin: auto;
-  margin-top: 40px;
-  width: 1200px;
+  .main-section {
+    margin: auto;
+    margin-top: 40px;
+    width: 1200px;
+  }
+  a {
+    color: #42b983;
+    font-weight: 600;
+    padding: 0 2px;
+    text-decoration: none;
+  }
 }
 </style>

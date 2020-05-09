@@ -43,7 +43,7 @@ export default {
       allList: "getLists",
     }),
   },
-  created() {
+  mounted() {
     this.getList(this.tab);
   },
   methods: {
