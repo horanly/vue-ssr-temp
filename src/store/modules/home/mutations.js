@@ -3,8 +3,11 @@ const mutations = {
     state.list = data
   },
   changeStoreList(state, data){
+    // data.limit = data.limit + 10
+    // data.obj[data.tab].limit = data.limit
+    // data.obj[data.tab].data = res.data 
     state.storeList = data
-    console.log(state.storeList, 'mutations');
+    // console.log(state.storeList, 'mutations');
     
   }
 }

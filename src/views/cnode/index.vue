@@ -28,44 +28,48 @@ export default {
     return {
       page: 1,
       limit: 20,
-      tab: "all"
+      tab: "all",
+      obj: {
+        all: { limit: "", data: "" },
+        good: { limit: "", data: "" },
+        share: { limit: "", data: "" },
+        ask: { limit: "", data: "" },
+        job: { limit: "", data: "" }
+      },
     };
   },
   computed: {
     ...mapGetters("home", {
-      allList: "getLists"
+      allList: "getLists",
     }),
   },
   created() {
     this.getList(this.tab);
   },
   methods: {
-      handleTabClick(name) {
-        this.tab = name;
-        
-        let store = this.$store.state.home.storeList
-        console.log(store.all, this.tab, 'storeListstoreListstoreList');
+    handleTabClick(name) {
+      this.tab = name;
 
-        if (!store[this.tab]) {
-            this.limit = 20;
-            // this.allList = []
-            this.$store.commit('home/changeList', [])
-            this.getList(this.tab)
-            return;
-        }
-        this.$store.commit('home/changeList', store[this.tab].data)
-        // this.allList = store[this.tab].data;
-        this.limit = store[this.tab].limit;
-
+      let store = this.$store.state.home.storeList;
+    //   console.log(store, this.tab, "storeListstoreListstoreList");
+      if (!store[this.tab].data) {
+        this.limit = 20;
+        // this.allList = []
+        this.$store.commit("home/changeList", []);
+        this.getList(this.tab);
+        return;
+      }
+      this.$store.commit("home/changeList", store[this.tab].data);
+      this.limit = store[this.tab].limit;
     },
     getList(type) {
       let params = {
         page: this.page,
         limit: this.limit,
         tab: type,
+        obj: this.obj,
       };
       this.$store.dispatch("home/getListAjax", params);
-
     },
   },
   components: {
@@ -75,11 +79,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.home{
-    margin: auto;
-    width: 90%;
-    padding: 20px 30px;
-    -webkit-box-shadow: 0 2px 12px 0 rgba(0,0,0,.1);
-    box-shadow: 0 2px 12px 0 rgba(0,0,0,.1);
+.home {
+  margin: auto;
+  width: 90%;
+  padding: 20px 30px;
+  -webkit-box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
 }
 </style>
