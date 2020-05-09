@@ -1,4 +1,4 @@
-import { getTopics } from '@/api/home/index.js'
+import { getTopics, getTopicById } from '@/api/home/index.js'
 
 const actions = {
   getListAjax: (ctx, data) => {
@@ -18,7 +18,20 @@ const actions = {
       // eslint-disable-next-line
       console.log(error)
     })
+  },
+  getTopicAjax(ctx, id) {
+    return new Promise((resolve, reject) => {
+      getTopicById(id).then(res => {
+        ctx.commit('changeTopic', res.data)
+        resolve(res);
+      }).catch(error => {
+        // eslint-disable-next-line
+        console.log(error)
+        reject(error)
+      })
+    })
   }
+
 
 }
 export default actions

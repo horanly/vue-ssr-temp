@@ -22,7 +22,8 @@
             </span>
           </p>
           <span class="thumbs">
-            <img v-if='reply.ups.length' :src="require('@/assets/image/thumbs-up.svg')" alt="点赞" />
+            <Icon  v-if='reply.ups.length' type="ios-thumbs-up" />
+            <!-- <img v-if='reply.ups.length' :src="require('@/assets/img/thumbs-up.svg')" alt="点赞" /> -->
             {{reply.ups.length !== 0 ? reply.ups.length : ''}}
           </span>
         </div>

@@ -7,6 +7,7 @@ const state = {
     share: {},
     ask: {},
     job: {}
-  } 
+  },
+  topic: {}
 }
 export default state

@@ -5,6 +5,9 @@ const getters = {
   },
   getStoreList(state) {
     return state.storeList
+  },
+  getTopic(state) {
+    return state.topic
   }
 }
 export default getters
