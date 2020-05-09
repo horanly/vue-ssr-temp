@@ -15,6 +15,7 @@ const actions = {
       ctx.commit('changeStoreList', data.obj)
 
     }).catch(error => {
+      // eslint-disable-next-line
       console.log(error)
     })
   }

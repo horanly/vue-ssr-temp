@@ -54,7 +54,7 @@ export default {
     height: 50px;
   }
   span.count {
-    width: 50px;
+    width: 70px;
     text-align: center;
     em:first-child {
       font-size: 1.2em;

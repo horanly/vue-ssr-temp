@@ -43,6 +43,6 @@ module.exports = {
         merge(options, {
           optimizeSSR: false
         });
-      });
+      })
   }
 };
