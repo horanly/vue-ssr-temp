@@ -2,7 +2,7 @@
   "publicPath": "/",
   "all": [
     "css/chunk-vendors.1bc8cbb4.css",
-    "css/main.fc33da34.css",
+    "css/main.b423254e.css",
     "favicon.ico",
     "fonts/ionicons.143146fa.woff2",
     "fonts/ionicons.99ac3308.woff",
@@ -12,17 +12,24 @@
     "index.html",
     "js/chunk-vendors.88f73b4c.js",
     "js/chunk-vendors.88f73b4c.js.map",
-    "js/main.5d673e2a.js",
-    "js/main.5d673e2a.js.map"
+    "js/main.0664c941.js",
+    "js/main.0664c941.js.map"
   ],
   "initial": [
     "css/chunk-vendors.1bc8cbb4.css",
     "js/chunk-vendors.88f73b4c.js",
-    "css/main.fc33da34.css",
-    "js/main.5d673e2a.js"
+    "css/main.b423254e.css",
+    "js/main.0664c941.js"
   ],
   "async": [],
   "modules": {
+    "33412020": [
+      1,
+      11,
+      -1,
+      12,
+      6
+    ],
     "49911796": [
       0,
       9,
@@ -101,7 +108,7 @@
       12,
       6
     ],
-    "2ecde8d0": [
+    "5d945f51": [
       1,
       11,
       -1,
@@ -1028,13 +1035,6 @@
       4,
       5
     ],
-    "047aa99f": [
-      1,
-      11,
-      -1,
-      12,
-      6
-    ],
     "2e77ccf6": [
       0,
       9,
@@ -1104,6 +1104,13 @@
       3,
       4,
       5
+    ],
+    "607f9c95": [
+      1,
+      11,
+      -1,
+      12,
+      6
     ],
     "0e708ace": [
       0,
@@ -1194,13 +1201,6 @@
       3,
       4,
       5
-    ],
-    "31b92614": [
-      1,
-      11,
-      -1,
-      12,
-      6
     ],
     "35d7538b": [
       1,

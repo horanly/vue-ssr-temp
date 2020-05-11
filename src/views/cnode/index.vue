@@ -45,13 +45,27 @@ export default {
   },
   mounted() {
     this.getList(this.tab);
+    window.addEventListener("scroll", this.scrollMethod);
+  },
+  destroyed() {
+    window.removeEventListener("scroll", this.scrollMethod);
   },
   methods: {
+    scrollMethod() {
+      const sumH =
+        document.body.scrollHeight || document.documentElement.scrollHeight;
+      const viewH = document.documentElement.clientHeight;
+      const scrollH =
+        document.body.scrollTop || document.documentElement.scrollTop;
+      if (viewH + scrollH >= sumH) {
+        this.limit = this.limit + 10
+        this.getList(this.tab);
+      }
+    },
+
     handleTabClick(name) {
       this.tab = name;
-
       let store = this.$store.state.home.storeList;
-    //   console.log(store, this.tab, "storeListstoreListstoreList");
       if (!store[this.tab].data) {
         this.limit = 20;
         // this.allList = []
